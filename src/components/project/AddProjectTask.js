@@ -23,13 +23,13 @@ const AddProjectTeam = ({ drawer }) => {
 	const [userList, setuserList] = useState([
 		{
 			id: 1,
-			firstName: "omega",
-			lastName: "solution",
+			firstName: "amar",
+			lastName: "shishodia",
 		},
 		{
 			id: 2,
-			firstName: "rakib",
-			lastName: "hasan",
+			firstName: "softomation",
+			lastName: "technologies",
 		},
 	]);
 	// const list = useSelector((state) => state.users.list);

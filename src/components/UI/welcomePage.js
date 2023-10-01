@@ -14,8 +14,8 @@ const WelcomePage = () => {
 							href='#_'
 							className='flex items-center mb-5 font-medium text-gray-900 lg:w-auto lg:items-center lg:justify-center md:mb-0'>
 							<span className='mx-auto text-xl font-black leading-none text-gray-900 select-none'>
-								HRM <span className='text-blue-600'>OS</span>
-								<span className='text-teal-600'>.</span>
+								HRM <span className='text-blue-600'>360</span>
+								<span className='text-teal-600'></span>
 							</span>
 						</a>
 					</div>
@@ -60,7 +60,7 @@ const WelcomePage = () => {
 									Embrace digital transformation with our powerful HR tool. Stay
 									ahead of the curve and gain a competitive edge.
 								</p>
-								<div className='relative flex flex-col sm:flex-row sm:space-x-4'>
+								{/* <div className='relative flex flex-col sm:flex-row sm:space-x-4'>
 									<a
 										href='/admin/dashboard'
 										className='flex items-center w-full px-6 py-3 mb-3 text-lg text-white bg-blue-600 rounded-md sm:mb-0 hover:bg-blue-700 sm:w-auto'>
@@ -83,7 +83,7 @@ const WelcomePage = () => {
 										className='flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600'>
 										Learn More
 									</a>
-								</div>
+								</div> */}
 							</div>
 						</div>
 						<div className='w-full md:w-1/2'>
@@ -256,7 +256,7 @@ const WelcomePage = () => {
 				</div>
 			</section>
 
-			<section className='flex items-center justify-center py-20 bg-white min-w-screen'>
+			{/* <section className='flex items-center justify-center py-20 bg-white min-w-screen'>
 				<div className='px-16 bg-white'>
 					<div className='container flex flex-col items-start mx-auto lg:items-center'>
 						<p className='relative flex items-start justify-start w-full text-lg font-bold tracking-wider text-purple-500 uppercase lg:justify-center lg:items-center'>
@@ -336,9 +336,9 @@ const WelcomePage = () => {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
-			<section className='box-border py-8 leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid sm:py-12 md:py-16 lg:py-24'>
+			{/* <section className='box-border py-8 leading-7 text-gray-900 bg-white border-0 border-gray-200 border-solid sm:py-12 md:py-16 lg:py-24'>
 				<div className='box-border max-w-6xl px-4 pb-12 mx-auto border-solid sm:px-6 md:px-6 lg:px-4'>
 					<div className='flex flex-col items-center leading-7 text-center text-gray-900'>
 						<h2 className='box-border m-0 text-3xl font-semibold leading-tight tracking-tight text-black border-solid sm:text-4xl md:text-5xl'>
@@ -413,42 +413,42 @@ const WelcomePage = () => {
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> */}
 
 			<section className='bg-white'>
 				<div className='max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8'>
 					<nav className='flex flex-wrap justify-center -mx-5 -my-2'>
 						<div className='px-5 py-2'>
 							<a
-								href='https://solution.omega.ac/about-us/'
+								href='https://softomation.com/about-us/'
 								className='text-base leading-6 text-gray-500 hover:text-gray-900'>
 								About
 							</a>
 						</div>
 						<div className='px-5 py-2'>
 							<a
-								href='https://solution.omega.ac/blog/'
+								href='https://softomation.com/blog/'
 								className='text-base leading-6 text-gray-500 hover:text-gray-900'>
 								Blog
 							</a>
 						</div>
 						<div className='px-5 py-2'>
 							<a
-								href='https://solution.omega.ac/about-us/'
+								href='https://softomation.com/about-us/'
 								className='text-base leading-6 text-gray-500 hover:text-gray-900'>
 								Team
 							</a>
 						</div>
 						<div className='px-5 py-2'>
 							<a
-								href='https://codecanyon.net/user/omegasolution/portfolio'
+								href='https://softomation.com/portfolio'
 								className='text-base leading-6 text-gray-500 hover:text-gray-900'>
 								Products
 							</a>
 						</div>
 						<div className='px-5 py-2'>
 							<a
-								href='https://solution.omega.ac/contact-us/'
+								href='https://softomation.com/contact-us/'
 								className='text-base leading-6 text-gray-500 hover:text-gray-900'>
 								Contact
 							</a>
@@ -463,7 +463,7 @@ const WelcomePage = () => {
 					</nav>
 					<div className='flex justify-center mt-8 space-x-6'>
 						<a
-							href='https://www.facebook.com/heyomegasolution'
+							href='https://www.facebook.com/heysoftomationsolution'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>Facebook</span>
 							<svg
@@ -478,7 +478,7 @@ const WelcomePage = () => {
 							</svg>
 						</a>
 						<a
-							href='https://www.instagram.com/heyomegasolution/'
+							href='https://www.instagram.com/heysoftomationsolution/'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>Instagram</span>
 							<svg
@@ -493,7 +493,7 @@ const WelcomePage = () => {
 							</svg>
 						</a>
 						<a
-							href='https://www.linkedin.com/company/omegasolutionbd'
+							href='https://www.linkedin.com/company/softomationsolutionbd'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>LinkedIn</span>
 							<svg
@@ -516,7 +516,7 @@ const WelcomePage = () => {
 							</svg>
 						</a>
 						<a
-							href='https://github.com/omegasolution'
+							href='https://github.com/softomationsolution'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>GitHub</span>
 							<svg
@@ -532,7 +532,7 @@ const WelcomePage = () => {
 						</a>
 					</div>
 					<p className='mt-8 text-base leading-6 text-center text-gray-400'>
-						{`© ${dayjs().year()} OMEGA SOLUTION . All rights reserved.`}
+						{`© ${dayjs().year()} Softomation Technologies . All rights reserved.`}
 					</p>
 				</div>
 			</section>

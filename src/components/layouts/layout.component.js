@@ -78,7 +78,7 @@ const HomeLayout = ({ children }) => (
           textAlign: "center",
         }}
       >
-        Omega Solution ©2022 Smart ERP
+        Softomation Technologies ©2023 HRMS 360
       </Footer>
     </Layout>
   </Layout>

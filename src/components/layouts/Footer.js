@@ -12,28 +12,28 @@ function Footer() {
           <p className={styles.copyrightText}>
             {year}{" "}
             <a
-              href="https://solution.omega.ac"
+              href="https://softomation.com"
               className="font-weight-bold"
               target="_blank"
               rel="noreferrer"
             >
-              Omega Solution
+              Softomation Technologies
             </a>{" "}
-            One stop solution.
+            
           </p>
         </Col>
         <Col xs={24} md={24} lg={12}>
           <div className={styles.footerMenu}>
             <ul className={styles.footerList}>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a
-                  href="https://omega.ac"
+                  href="https://softomation.com"
                   className="nav-link text-muted"
                   target="/"
                 >
-                  Omega
+                  Softomation
                 </a>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <a href="/admin" className="nav-link text-muted" target="/">
                   About Us
