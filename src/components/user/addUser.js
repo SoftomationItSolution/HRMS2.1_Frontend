@@ -87,6 +87,7 @@ const AddUser = () => {
 
 			educations: values.educations || education,
 		};
+		console.log(FormData)
 		try {
 			const resp = await dispatch(addStaff(FormData));
 			setLoader(true);
@@ -153,7 +154,7 @@ const AddUser = () => {
 											message: "Please input First Name!",
 										},
 									]}>
-									<Input placeholder='John' />
+									<Input placeholder='First Name' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -165,7 +166,7 @@ const AddUser = () => {
 											message: "Please input Last Name!",
 										},
 									]}>
-									<Input placeholder='Doe' />
+									<Input placeholder='Last Name' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -177,7 +178,7 @@ const AddUser = () => {
 											message: "Please input User Name!",
 										},
 									]}>
-									<Input placeholder='john_doe' />
+									<Input placeholder='User Name' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -189,7 +190,7 @@ const AddUser = () => {
 											message: "Please input your password !",
 										},
 									]}>
-									<Input placeholder='Strong Password' />
+									<Input placeholder='Password' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -201,7 +202,7 @@ const AddUser = () => {
 											message: "Please input email!",
 										},
 									]}>
-									<Input placeholder='johndoe2@example.com' />
+									<Input placeholder='Email' />
 								</Form.Item>
 							</Col>
 							<Col span={12} className='gutter-row'>
@@ -219,7 +220,7 @@ const AddUser = () => {
 										},
 									]}>
 									<Input
-										placeholder='123 Main Street'
+										placeholder='Enter Address'
 										style={{ width: "100%" }}
 									/>
 								</Form.Item>
@@ -228,7 +229,7 @@ const AddUser = () => {
 									label='City'
 									name='city'
 									rules={[{ required: true, message: "Please input city!" }]}>
-									<Input placeholder='Los Angeles' />
+									<Input placeholder='City' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -244,7 +245,7 @@ const AddUser = () => {
 									rules={[
 										{ required: true, message: "Please input Zip Code!" },
 									]}>
-									<Input placeholder='90211' />
+									<Input placeholder='000000' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -253,7 +254,7 @@ const AddUser = () => {
 									rules={[
 										{ required: true, message: "Please input Country!" },
 									]}>
-									<Input placeholder='USA' />
+									<Input placeholder='Bharat' />
 								</Form.Item>
 							</Col>
 						</Row>
@@ -298,7 +299,7 @@ const AddUser = () => {
 											message: "Please input Employee ID!",
 										},
 									]}>
-									<Input placeholder='OE-012' />
+									<Input placeholder='Emp-001' />
 								</Form.Item>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
@@ -307,7 +308,7 @@ const AddUser = () => {
 									rules={[
 										{
 											required: true,
-											message: "Please input Blood Group!",
+											message: "Please Select Blood Group!",
 										},
 									]}>
 									<Select
@@ -332,7 +333,7 @@ const AddUser = () => {
 									rules={[
 										{
 											required: true,
-											message: "Please input Employment Status!",
+											message: "Please Select Employment Status!",
 										},
 									]}
 									label='Employee Status'>
@@ -355,7 +356,7 @@ const AddUser = () => {
 									style={{ marginBottom: "10px" }}
 									label='Department'
 									rules={[
-										{ required: true, message: "Please input Department!" },
+										{ required: true, message: "Please Select Department!" },
 									]}>
 									<Select
 										loading={!department}
@@ -372,7 +373,7 @@ const AddUser = () => {
 								</Form.Item>
 								<Form.Item
 									rules={[
-										{ required: true, message: "Please input Department!" },
+										{ required: true, message: "Please Select User Role!" },
 									]}
 									label='Role'
 									name={"roleId"}
@@ -402,7 +403,7 @@ const AddUser = () => {
 
 								<Form.Item
 									rules={[
-										{ required: true, message: "Please input Department!" },
+										{ required: true, message: "Please Select User Shift!" },
 									]}
 									label='Shift'
 									name={"shiftId"}
@@ -432,7 +433,7 @@ const AddUser = () => {
 
 								<Form.Item
 									rules={[
-										{ required: true, message: "Please input Department!" },
+										{ required: true, message: "Please Select Leave Policy!" },
 									]}
 									label='Leave Policy'
 									name={"leavePolicyId"}
@@ -457,7 +458,7 @@ const AddUser = () => {
 
 								<Form.Item
 									rules={[
-										{ required: true, message: "Please input Department!" },
+										{ required: true, message: "Please Select Weekly Roaster!" },
 									]}
 									label='WeekLy Holiday'
 									name={"weeklyHolidayId"}
@@ -487,7 +488,7 @@ const AddUser = () => {
 
 								<Form.Item
 									rules={[
-										{ required: true, message: "Please input Designation!" },
+										{ required: true, message: "Please Select Designation!" },
 									]}
 									label='Designation'
 									name={"designationId"}

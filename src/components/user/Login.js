@@ -82,13 +82,13 @@ const Login = () => {
 									Submit
 								</Button>
 							</Form.Item>
-							<Form.Item className={styles.loginTableContainer}>
+							{/* <Form.Item className={styles.loginTableContainer}>
 								<Row>
 									<Col span={24}>
 										<LoginTable />
 									</Col>
 								</Row>
-							</Form.Item>
+							</Form.Item> */}
 						</Form>
 					</Card>
 				</Col>

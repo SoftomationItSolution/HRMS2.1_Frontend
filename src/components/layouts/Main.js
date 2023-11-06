@@ -106,7 +106,7 @@ function Main({ children }) {
 									HRM
 									<strong style={{ color: "#6ECCAF	", fontWeight: "bold" }}>
 										{" "}
-										OS
+										360
 									</strong>
 								</h2>
 							</div>

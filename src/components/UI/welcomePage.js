@@ -90,7 +90,7 @@ const WelcomePage = () => {
 							<div className='w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl'>
 								<img
 									src='https://i.ibb.co/cNfg9Y7/MOKEUPHRMOS.png" alt="MOKEUPHRMOS'
-									alt='HRM-OS best HRM '
+									alt='HRM-360 best HRM '
 								/>
 							</div>
 						</div>

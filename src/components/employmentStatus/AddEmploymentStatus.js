@@ -163,7 +163,7 @@ const AddEmploymentStatus = ({ drawer }) => {
 	};
 
 	const onFinishFailed = (errorInfo) => {
-		toast.warning("Failed at adding shift");
+		toast.warning("Failed at adding status");
 		setLoader(false);
 	};
 	return (
