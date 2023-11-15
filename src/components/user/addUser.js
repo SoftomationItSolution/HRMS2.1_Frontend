@@ -211,12 +211,12 @@ const AddUser = () => {
 								</h2>
 								<Form.Item
 									style={{ marginBottom: "10px" }}
-									label='Street'
+									label='House Address'
 									name='street'
 									rules={[
 										{
 											required: true,
-											message: "Please input street!",
+											message: "Please input house address!",
 										},
 									]}>
 									<Input
@@ -460,7 +460,7 @@ const AddUser = () => {
 									rules={[
 										{ required: true, message: "Please Select Weekly Roaster!" },
 									]}
-									label='WeekLy Holiday'
+									label='Weekly Holiday'
 									name={"weeklyHolidayId"}
 									style={{ marginBottom: "10px" }}>
 									<Select
@@ -518,7 +518,7 @@ const AddUser = () => {
 
 								<Form.Item
 									style={{ marginBottom: "10px" }}
-									label='Designation Start Date'
+									label='Start Date'
 									rules={[{ required: true, message: "Please input date!" }]}
 									name='designationStartDate'>
 									<DatePicker className='date-picker hr-staffs-date-picker' />
@@ -526,7 +526,7 @@ const AddUser = () => {
 
 								<Form.Item
 									style={{ marginBottom: "10px" }}
-									label='Designation End Date'
+									label='End Date'
 									name='designationEndDate'>
 									<DatePicker className='date-picker hr-staffs-date-picker' />
 								</Form.Item>

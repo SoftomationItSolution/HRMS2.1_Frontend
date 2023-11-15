@@ -463,7 +463,7 @@ const WelcomePage = () => {
 					</nav>
 					<div className='flex justify-center mt-8 space-x-6'>
 						<a
-							href='https://www.facebook.com/heysoftomationsolution'
+							href='https://www.facebook.com/softomationtechnologies'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>Facebook</span>
 							<svg
@@ -478,7 +478,7 @@ const WelcomePage = () => {
 							</svg>
 						</a>
 						<a
-							href='https://www.instagram.com/heysoftomationsolution/'
+							href='https://www.instagram.com/softomationtechnologies/'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>Instagram</span>
 							<svg
@@ -493,7 +493,7 @@ const WelcomePage = () => {
 							</svg>
 						</a>
 						<a
-							href='https://www.linkedin.com/company/softomationsolutionbd'
+							href='https://www.linkedin.com/company/softomationtechnologies'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>LinkedIn</span>
 							<svg
@@ -516,7 +516,7 @@ const WelcomePage = () => {
 							</svg>
 						</a>
 						<a
-							href='https://github.com/softomationsolution'
+							href='https://github.com/softomationtechnologies'
 							className='text-gray-400 hover:text-gray-500'>
 							<span className='sr-only'>GitHub</span>
 							<svg
