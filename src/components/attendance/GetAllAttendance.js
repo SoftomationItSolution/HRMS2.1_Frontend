@@ -1,7 +1,7 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Link, Navigate } from "react-router-dom";
 
-import { Card, DatePicker, Segmented, Table, Tag } from "antd";
+import { Card, DatePicker, RangePicker, Segmented, Table, Tag } from "antd";
 import dayjs from "dayjs";
 import { useEffect, useState } from "react";
 import { CSVLink } from "react-csv";
@@ -16,7 +16,9 @@ import {
 import BtnSearchSvg from "../UI/Button/btnSearchSvg";
 import { VioletLinkBtn } from "../UI/AllLinkBtn";
 
-//Date fucntinalities
+import moment from "moment";
+
+//Date fucntionalities
 let startdate = dayjs().startOf("month");
 let enddate = dayjs().endOf("month");
 
@@ -30,7 +32,7 @@ function CustomTable({ list, total, status, setStatus, loading }) {
 		dispatch(
 			loadAllAttendancePaginated({
 				page: 1,
-				limit: 30,
+				limit: 31,
 				startdate,
 				enddate,
 			})
@@ -237,7 +239,7 @@ const GetAllAttendance = (props) => {
 		dispatch(
 			loadAllAttendancePaginated({
 				page: 1,
-				limit: 30,
+				limit: 31,
 				startdate,
 				enddate,
 			})
@@ -245,9 +247,15 @@ const GetAllAttendance = (props) => {
 	}, []);
 
 	const onCalendarChange = (dates) => {
-		startdate = (dates?.[0]).format("DD-MM-YYYY");
-		enddate = (dates?.[1]).format("DD-MM-YYYY");
+		// startdate = dayjs((dates?.[0]).format("DD-MM-YYYY"));
+		// enddate = dayjs((dates?.[1]).format("DD-MM-YYYY"));
+		startdate = (dates?.[0]) ? dayjs(dates[0]).toDate() : null;
+  enddate = (dates?.[1]) ? dayjs(dates[1]).endOf('day').toDate() : null;
+
 	};
+
+// Convert startdate and enddate to moment objects
+const defaultValue = [moment(startdate), moment(enddate)];
 
 	const onClickSearch = () => {
 		// dispatch(clearAttendanceList());
@@ -255,7 +263,7 @@ const GetAllAttendance = (props) => {
 		dispatch(
 			loadAllAttendancePaginated({
 				page: 1,
-				limit: 30,
+				limit: 31,
 				startdate,
 				enddate,
 			})
@@ -278,7 +286,7 @@ const GetAllAttendance = (props) => {
 						<div className='flex justify-end'>
 							<RangePicker
 								onCalendarChange={onCalendarChange}
-								defaultValue={[startdate, enddate]}
+								defaultValue={defaultValue}
 								format={"DD-MM-YYYY"}
 								className='range-picker mr-3'
 								style={{ maxWidth: "400px" }}
@@ -291,6 +299,7 @@ const GetAllAttendance = (props) => {
 						</div>
 					</div>
 					{/*TODO : ADD TOTAL AMOUNT HERE */}
+					{Array.isArray(list) && (
 					<CustomTable
 						list={list}
 						loading={loading}
@@ -300,6 +309,7 @@ const GetAllAttendance = (props) => {
 						status={status}
 						setStatus={setStatus}
 					/>
+					)}
 				</div>
 			</Card>
 		</>
