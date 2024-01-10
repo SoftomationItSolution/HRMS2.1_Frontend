@@ -24,6 +24,7 @@ import AddPermission from "./components/role/AddPermission";
 import DetailRole from "./components/role/DetailsRole";
 import RoleList from "./components/role/role";
 import InvoiceSetting from "./components/settings/invoiceSetting";
+import OfficeAreaSetting from "./components/settings/officeAreaSetting.js";
 import WelcomePage from "./components/UI/welcomePage";
 import GetAllUsers from "./components/user/GetAllUser";
 import Department from "./components/department/Department.js";
@@ -187,6 +188,14 @@ function App() {
 								path='/admin/company-setting'
 								exact
 								element={<InvoiceSetting />}
+							/>
+						</Route>
+						<Route
+							element={<UserPrivateRoute permission={"readAll-setting"} />}>
+							<Route
+								path='/admin/office-area'
+								exact
+								element={<OfficeAreaSetting />}
 							/>
 						</Route>
 

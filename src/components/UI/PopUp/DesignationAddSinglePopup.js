@@ -11,8 +11,8 @@ import { loadAllDesignation } from "../../../redux/rtk/features/designation/desi
 const DesignationAddSinglePopup = ({ list, setLoading }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [form] = Form.useForm();
-	const [designationStartDate, setdesignationStartDate] = useState(null);
-	const [designationEndDate, setdesignationEndDate] = useState(null);
+	const [StartDate, setdesignationStartDate] = useState(null);
+	const [EndDate, setdesignationEndDate] = useState(null);
 	const [loader, setLoader] = useState(false);
 	const [designationId, setDesignationId] = useState("");
 
@@ -28,8 +28,8 @@ const DesignationAddSinglePopup = ({ list, setLoading }) => {
 			...values,
 			userId: parseInt(user_id.id),
 			designationId: parseInt(designationId),
-			designationStartDate: dayjs(designationStartDate).format("YYYY-MM-DD"),
-			designationEndDate: dayjs(designationEndDate).format("YYYY-MM-DD"),
+			StartDate: dayjs(StartDate).format("YYYY-MM-DD"),
+			EndDate: dayjs(EndDate).format("YYYY-MM-DD"),
 		};
 
 		const resp = await addDesHistory(infodata);
@@ -127,8 +127,8 @@ const DesignationAddSinglePopup = ({ list, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='Start Date'
-							name='designationStartDate'
-							valuePropName='designationStartDate'
+							name='StartDate'
+							valuePropName='StartDate'
 							rules={[
 								{
 									required: true,
@@ -141,8 +141,8 @@ const DesignationAddSinglePopup = ({ list, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='End Date'
-							name='designationEndDate'
-							valuePropName='designationEndDate'>
+							name='EndDate'
+							valuePropName='EndDate'>
 							<DatePicker onChange={(date) => setdesignationEndDate(date)} />
 						</Form.Item>
 

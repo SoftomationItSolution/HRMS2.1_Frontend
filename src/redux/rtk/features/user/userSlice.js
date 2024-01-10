@@ -94,6 +94,7 @@ export const addUser = createAsyncThunk("user/addUser", async (values) => {
 		});
 		localStorage.setItem("access-token", data.token);
 		localStorage.setItem("role", data.role);
+		localStorage.setItem("roleId", data.roleId);
 		localStorage.setItem("user", data.userName);
 		localStorage.setItem("id", data.id);
 		localStorage.setItem("isLogged", true);

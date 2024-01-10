@@ -473,6 +473,15 @@ const Sidenav = ({ color, sideNavOpenKeys }) => {
 					key: "invoiceSetting",
 					icon: <SettingOutlined />,
 				},
+				hasPermission("readAll-setting") && {
+					label: (
+						<NavLink to='/admin/office-area'>
+							<span>Office Area</span>
+						</NavLink>
+					),
+					key: "invoiceSetting",
+					icon: <SettingOutlined />,
+				},
 			],
 		},
 	];

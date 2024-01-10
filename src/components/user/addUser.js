@@ -44,8 +44,8 @@ const AddUser = () => {
 			institution: "",
 			fieldOfStudy: "",
 			result: "",
-			studyStartDate: "",
-			studyEndDate: "",
+			startDate: "",
+			endDate: "",
 		},
 	]);
 
@@ -520,14 +520,14 @@ const AddUser = () => {
 									style={{ marginBottom: "10px" }}
 									label='Start Date'
 									rules={[{ required: true, message: "Please input date!" }]}
-									name='designationStartDate'>
+									name='StartDate'>
 									<DatePicker className='date-picker hr-staffs-date-picker' />
 								</Form.Item>
 
 								<Form.Item
 									style={{ marginBottom: "10px" }}
 									label='End Date'
-									name='designationEndDate'>
+									name='EndDate'>
 									<DatePicker className='date-picker hr-staffs-date-picker' />
 								</Form.Item>
 
@@ -546,7 +546,7 @@ const AddUser = () => {
 
 								<Form.Item
 									label='Salary Start Date'
-									name='salaryStartDate'
+									name='startDate'
 									style={{ marginBottom: "10px" }}
 									rules={[
 										{
@@ -560,7 +560,7 @@ const AddUser = () => {
 								<Form.Item
 									style={{ marginBottom: "10px" }}
 									label='Salary End Date'
-									name='salaryEndDate'>
+									name='endDate'>
 									<DatePicker className='date-picker hr-staffs-date-picker' />
 								</Form.Item>
 

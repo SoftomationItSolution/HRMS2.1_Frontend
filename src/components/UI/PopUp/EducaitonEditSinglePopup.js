@@ -11,10 +11,10 @@ import moment from "moment";
 
 const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [studyStartDate, setstudyStartDate] = useState(
+	const [startDate, setstudyStartDate] = useState(
 		dayjs(data?.startDate).format("YYYY-MM-DD")
 	);
-	const [studyEndDate, setstudyEndDate] = useState(
+	const [endDate, setstudyEndDate] = useState(
 		dayjs(data?.endDate).format("YYYY-MM-DD")
 	);
 	const [loader, setLoader] = useState(false);
@@ -24,8 +24,8 @@ const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 		institution: data?.institution || "",
 		fieldOfStudy: data?.fieldOfStudy || "",
 		result: data?.result || "",
-		studyStartDate: moment(data?.startDate),
-		studyEndDate: moment(data?.endDate),
+		startDate: moment(data?.startDate),
+		endDate: moment(data?.endDate),
 	});
 
 	const user_id = useParams("id");
@@ -37,8 +37,8 @@ const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 		setLoader(true);
 		const infodata = {
 			...values,
-			studyStartDate: studyStartDate,
-			studyEndDate: studyEndDate,
+			startDate: startDate,
+			endDate: endDate,
 		};
 		const resp = await updateEducation(id, infodata);
 
@@ -158,7 +158,7 @@ const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='Start Date'
-							name='studyStartDate'
+							name='startDate'
 							rules={[
 								{
 									required: true,
@@ -166,7 +166,7 @@ const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 								},
 							]}>
 							<DatePicker
-								name='studyStartDate'
+								name='startDate'
 								onChange={(date) => setstudyStartDate(date)}
 								format='YYYY-MM-DD'
 							/>
@@ -175,7 +175,7 @@ const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='End Date'
-							name='studyEndDate'
+							name='endDate'
 							rules={[
 								{
 									required: true,
@@ -183,7 +183,7 @@ const EducaitonEditSinglePopup = ({ data, setLoading }) => {
 								},
 							]}>
 							<DatePicker
-								name='studyEndDate'
+								name='endDate'
 								onChange={(date) => setstudyEndDate(date)}
 								format='YYYY-MM-DD'
 							/>

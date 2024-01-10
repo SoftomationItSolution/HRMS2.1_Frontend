@@ -11,10 +11,10 @@ import moment from "moment";
 
 const DesignationEditSinglePopup = ({ data, setLoading }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [designationStartDate, setdesignationStartDate] = useState(
+	const [StartDate, setdesignationStartDate] = useState(
 		dayjs(data?.startDate).format("YYYY-MM-DD")
 	);
-	const [designationEndDate, setdesignationEndDate] = useState(
+	const [EndDate, setdesignationEndDate] = useState(
 		dayjs(data?.endDate).format("YYYY-MM-DD")
 	);
 	const [loader, setLoader] = useState(false);
@@ -29,8 +29,8 @@ const DesignationEditSinglePopup = ({ data, setLoading }) => {
 
 	const [initialValues, setInitialValues] = useState({
 		designationId: data?.designationId || "",
-		designationStartDate: moment(data?.startDate),
-		designationEndDate: moment(data?.endDate),
+		StartDate: moment(data?.startDate),
+		EndDate: moment(data?.endDate),
 		designationComment: data?.comment,
 	});
 
@@ -42,8 +42,8 @@ const DesignationEditSinglePopup = ({ data, setLoading }) => {
 			...values,
 			designationId: designationId,
 			designationComment: designationComment || "",
-			designationStartDate: designationStartDate,
-			designationEndDate: designationEndDate,
+			StartDate: StartDate,
+			EndDate: EndDate,
 		};
 
 		const resp = await updateDesHistory(id, infodata);
@@ -142,7 +142,7 @@ const DesignationEditSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='Start Date'
-							name='designationStartDate'
+							name='StartDate'
 							rules={[
 								{
 									required: true,
@@ -150,7 +150,7 @@ const DesignationEditSinglePopup = ({ data, setLoading }) => {
 								},
 							]}>
 							<DatePicker
-								name='designationStartDate'
+								name='StartDate'
 								format='YYYY-MM-DD'
 								onChange={(date) => setdesignationStartDate(date)}
 							/>
@@ -159,9 +159,9 @@ const DesignationEditSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='End Date'
-							name='designationEndDate'>
+							name='EndDate'>
 							<DatePicker
-								defaultValue={initialValues.designationEndDate}
+								defaultValue={initialValues.EndDate}
 								onChange={(date) => setdesignationEndDate(date)}
 							/>
 						</Form.Item>

@@ -10,11 +10,15 @@ import {
 // import { useParams } from "react-router-dom";
 // import { toast } from "react-toastify";
 import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
 import getUserFromToken from "../../../utils/getUserFromToken";
 // publicIp
 const publicIp = require("react-public-ip");
 
 const AttendancePopup = () => {
+
+	dayjs.extend(utc);
+	
 	const isLogged = localStorage.getItem("isLogged");
 
 	const dispatch = useDispatch();

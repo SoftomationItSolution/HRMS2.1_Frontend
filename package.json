@@ -71,7 +71,13 @@
 		"workbox-range-requests": "^6.5.4",
 		"workbox-routing": "^6.5.4",
 		"workbox-strategies": "^6.5.4",
-		"workbox-streams": "^6.5.4"
+		"workbox-streams": "^6.5.4",
+		"leaflet": "^1.9.4",
+    "leaflet-draw": "^1.0.4",
+    "mapbox-gl": "^3.0.1","react-leaflet": "^4.2.1",
+    "react-leaflet-draw": "^0.20.4",
+    "react-leaflet-easyprint": "^2.0.0"
+
 	},
 	"scripts": {
 		"start": "react-scripts start",

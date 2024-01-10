@@ -11,10 +11,10 @@ import moment from "moment";
 
 const SalaryEditSinglePopup = ({ data, setLoading }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [salaryStartDate, setsalaryStartDate] = useState(
+	const [startDate, setsalaryStartDate] = useState(
 		dayjs(data?.startDate).format()
 	);
-	const [salaryEndDate, setsalaryEndDate] = useState(
+	const [endDate, setsalaryEndDate] = useState(
 		dayjs(data?.endDate).format()
 	);
 	const [loader, setLoader] = useState(false);
@@ -25,8 +25,8 @@ const SalaryEditSinglePopup = ({ data, setLoading }) => {
 
 	const [initialValues, setInitialValues] = useState({
 		salary: data?.salary,
-		salaryStartDate: moment(data?.startDate),
-		salaryEndDate: moment(data?.endDate),
+		startDate: moment(data?.startDate),
+		endDate: moment(data?.endDate),
 		salaryComment: data?.comment,
 	});
 
@@ -38,8 +38,8 @@ const SalaryEditSinglePopup = ({ data, setLoading }) => {
 			...values,
 			salary: parseInt(values.salary),
 			salaryComment: salaryComment || "",
-			salaryStartDate: salaryStartDate,
-			salaryEndDate: salaryEndDate,
+			startDate: startDate,
+			endDate: endDate,
 		};
 
 		const resp = await updateSalaryHistory(id, infodata);
@@ -128,7 +128,7 @@ const SalaryEditSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='Start Date'
-							name='salaryStartDate'
+							name='startDate'
 							rules={[
 								{
 									required: true,
@@ -136,7 +136,7 @@ const SalaryEditSinglePopup = ({ data, setLoading }) => {
 								},
 							]}>
 							<DatePicker
-								name='salaryStartDate'
+								name='startDate'
 								onChange={(date) => setsalaryStartDate(date)}
 							/>
 						</Form.Item>
@@ -144,9 +144,9 @@ const SalaryEditSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='End Date'
-							name='salaryEndDate'>
+							name='endDate'>
 							<DatePicker
-								defaultValue={initialValues.salaryEndDate}
+								defaultValue={initialValues.endDate}
 								onChange={(date) => setsalaryEndDate(date)}
 							/>
 						</Form.Item>

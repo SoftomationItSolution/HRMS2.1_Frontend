@@ -1,0 +1,99 @@
+.office-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.content-container {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-1,
+.mb-6 {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.address-input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* .flex-item {
+    flex: 1;
+} */
+
+.MapContainer {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+}
+
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content strong {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+select {
+    width: 100%; 
+    padding: 0.5rem; 
+    box-sizing: border-box; 
+  }
+  .add-button {
+    margin-left: 50px;
+    margin-top: 25px; 
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.add-button:hover {
+    background-color: #9838a1;
+}
+.locate {
+    /* margin-left: 00px; */
+    margin-top: 25px; 
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.locate:hover {
+    background-color: #9838a1;
+}

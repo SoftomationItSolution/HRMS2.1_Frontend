@@ -14,6 +14,7 @@ export const addPayslip = createAsyncThunk(
 	"payslip/addPayslip",
 	async (values) => {
 		try {
+			console.log("Values from redux>> ", values);
 			const { data } = await axios({
 				method: "post",
 				headers: {

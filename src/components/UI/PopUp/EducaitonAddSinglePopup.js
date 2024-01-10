@@ -11,8 +11,8 @@ import BtnEditSvg from "../Button/btnEditSvg";
 const EducaitonAddSinglePopup = ({ data, setLoading }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [form] = Form.useForm();
-	const [studyStartDate, setstudyStartDate] = useState(null);
-	const [studyEndDate, setstudyEndDate] = useState(null);
+	const [startDate, setstudyStartDate] = useState(null);
+	const [endDate, setstudyEndDate] = useState(null);
 	const [loader, setLoader] = useState(false);
 
 	const user_id = useParams("id");
@@ -24,8 +24,8 @@ const EducaitonAddSinglePopup = ({ data, setLoading }) => {
 		const infodata = {
 			...values,
 			userId: parseInt(user_id.id),
-			studyStartDate: dayjs(studyStartDate).format("YYYY-MM-DD"),
-			studyEndDate: dayjs(studyEndDate).format("YYYY-MM-DD"),
+			startDate: dayjs(startDate).format("YYYY-MM-DD"),
+			endDate: dayjs(endDate).format("YYYY-MM-DD"),
 		};
 
 		const resp = await addEducation(infodata);
@@ -149,8 +149,8 @@ const EducaitonAddSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='Start Date'
-							name='studyStartDate'
-							valuePropName='studyStartDate'
+							name='startDate'
+							valuePropName='startDate'
 							rules={[
 								{
 									required: true,
@@ -163,8 +163,8 @@ const EducaitonAddSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='End Date'
-							name='studyEndDate'
-							valuePropName='studyEndDate'>
+							name='endDate'
+							valuePropName='endDate'>
 							<DatePicker onChange={(date) => setstudyEndDate(date)} />
 						</Form.Item>
 

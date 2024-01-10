@@ -46,16 +46,16 @@ const EmployeeEducationForm = ({ key, restField, remove, name }) => {
 
 				<Form.Item
 					{...restField}
-					name={[name, "studyStartDate"]}
-					rules={[{ required: true, message: "Missing studyStartDate" }]}>
-					<DatePicker placeholder='studyStartDate' />
+					name={[name, "startDate"]}
+					rules={[{ required: true, message: "Missing startDate" }]}>
+					<DatePicker placeholder='startDate' />
 				</Form.Item>
 
 				<Form.Item
 					{...restField}
-					name={[name, "studyEndDate"]}
-					rules={[{ required: true, message: "Missing studyEndDate" }]}>
-					<DatePicker placeholder='studyEndDate' />
+					name={[name, "endDate"]}
+					rules={[{ required: true, message: "Missing endDate" }]}>
+					<DatePicker placeholder='endDate' />
 				</Form.Item>
 
 				<Form.Item

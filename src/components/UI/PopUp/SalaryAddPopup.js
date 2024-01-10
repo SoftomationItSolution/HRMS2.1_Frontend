@@ -18,8 +18,8 @@ import { addSalaryHistory } from "../../salaryHistory/salaryHistoryApis";
 const SalaryAddSinglePopup = ({ data, setLoading }) => {
 	const [isModalOpen, setIsModalOpen] = useState(false);
 	const [form] = Form.useForm();
-	const [salaryStartDate, setsalaryStartDate] = useState(null);
-	const [salaryEndDate, setsalaryEndDate] = useState(null);
+	const [startDate, setsalaryStartDate] = useState(null);
+	const [endDate, setsalaryEndDate] = useState(null);
 	const [loader, setLoader] = useState(false);
 
 	const user_id = useParams("id");
@@ -32,8 +32,8 @@ const SalaryAddSinglePopup = ({ data, setLoading }) => {
 			...values,
 			userId: parseInt(user_id.id),
 			salary: parseInt(values.salary),
-			salaryStartDate: dayjs(salaryStartDate).format("YYYY-MM-DD"),
-			salaryEndDate: dayjs(salaryEndDate).format("YYYY-MM-DD"),
+			startDate: dayjs(startDate).format("YYYY-MM-DD"),
+			endDate: dayjs(endDate).format("YYYY-MM-DD"),
 		};
 
 		const resp = await addSalaryHistory(infodata);
@@ -112,8 +112,8 @@ const SalaryAddSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='Start Date'
-							name='salaryStartDate'
-							valuePropName='salaryStartDate'
+							name='startDate'
+							valuePropName='startDate'
 							rules={[
 								{
 									required: true,
@@ -126,8 +126,8 @@ const SalaryAddSinglePopup = ({ data, setLoading }) => {
 						<Form.Item
 							style={{ marginBottom: "10px" }}
 							label='End Date'
-							name='salaryEndDate'
-							valuePropName='salaryEndDate'>
+							name='endDate'
+							valuePropName='endDate'>
 							<DatePicker onChange={(date) => setsalaryEndDate(date)} />
 						</Form.Item>
 

@@ -75,7 +75,7 @@ const AddSalaryHistory = ({ drawer }) => {
 								<Form.Item
 									style={{ marginBottom: "10px" }}
 									label='Start Date'
-									name='salaryStartDate'
+									name='startDate'
 									rules={[
 										{
 											required: true,
@@ -88,7 +88,7 @@ const AddSalaryHistory = ({ drawer }) => {
 								<Form.Item
 									style={{ marginBottom: "10px" }}
 									label='End Date'
-									name='salaryEndDate'>
+									name='endDate'>
 									<DatePicker placeholder='Select date' />
 								</Form.Item>
 

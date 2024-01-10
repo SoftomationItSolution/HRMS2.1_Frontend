@@ -49,12 +49,12 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 								{(data.user.firstName + " " + data.user.lastName).toUpperCase()}
 							</TitleText>
 							<TitleText2>{data.user.email || "demo@demo.com"}</TitleText2>
-							<TitleText2>{data.user.phone || "+800777877787"}</TitleText2>
+							<TitleText2>{data.user.phone || "+91-9999999999"}</TitleText2>
 						</Col>
 
 						<Col span={6}>
 							<p>
-								<TitleText>Salary:</TitleText> $ {data.salary}
+								<TitleText>Salary:</TitleText> Rs. {data.salary}
 							</p>
 							<TitleText>Work Day: </TitleText> {data.workDay}
 							<p>
@@ -64,7 +64,10 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 						<Col span={6}>
 							<p>
 								<TitleText>Payslip for:</TitleText>{" "}
-								{dayjs(data.salaryMonth, "M").format("MMMM")}, {data.salaryYear}
+								{/* {dayjs(data.salaryMonth, "M").format("MMMM")}, {data.salaryYear} */}
+								{dayjs(String(data.salaryMonth), "M").format("MMM")}, {data.salaryYear}
+								{/* {dayjs(data.salaryMonth).format("MM")} */}
+
 							</p>
 							<p>
 								<TitleText>Created at:</TitleText>{" "}
@@ -90,7 +93,7 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 								<Col
 									span={12}
 									style={{ display: "flex", justifyContent: "flex-end" }}>
-									<Title level={5}>$ {data.salaryPayable}</Title>
+									<Title level={5}>Rs. {data.salaryPayable}</Title>
 								</Col>
 							</Row>
 							<Row>
@@ -100,7 +103,7 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 								<Col
 									span={12}
 									style={{ display: "flex", justifyContent: "flex-end" }}>
-									<Title level={5}>$ {data.bonus}</Title>
+									<Title level={5}>Rs. {data.bonus}</Title>
 								</Col>
 							</Row>
 
@@ -112,7 +115,7 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 								<Col
 									span={12}
 									style={{ display: "flex", justifyContent: "flex-end" }}>
-									<Title level={5}>$ {data.salaryPayable + data.bonus}</Title>
+									<Title level={5}>Rs. {data.salaryPayable + data.bonus}</Title>
 								</Col>
 							</Row>
 						</Col>
@@ -129,7 +132,7 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 								<Col
 									span={12}
 									style={{ display: "flex", justifyContent: "flex-end" }}>
-									<Title level={5}>$ {data.deduction}</Title>
+									<Title level={5}>Rs. {data.deduction}</Title>
 								</Col>
 							</Row>
 
@@ -141,7 +144,7 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 								<Col
 									span={12}
 									style={{ display: "flex", justifyContent: "flex-end" }}>
-									<Title level={5}>$ {data.deduction}</Title>
+									<Title level={5}>Rs. {data.deduction}</Title>
 								</Col>
 							</Row>
 						</Col>
@@ -150,11 +153,11 @@ const PrintToPdf = forwardRef(({ data, invoiceData }, ref) => {
 					<div style={{ marginTop: "5%" }} className='flex justify-end'>
 						<div>
 							<Title level={4}>
-								Total Earnings : $ {data.salaryPayable + data.bonus}{" "}
+								Total Earnings : Rs. {data.salaryPayable + data.bonus}{" "}
 							</Title>
-							<Title level={4}>Total Deduction : $ {data.deduction} </Title>
+							<Title level={4}>Total Deduction : Rs. {data.deduction} </Title>
 							<Title level={3}>
-								Total Payable Salary : $ {data.totalPayable}{" "}
+								Total Payable Salary : Rs. {data.totalPayable}{" "}
 							</Title>
 						</div>
 					</div>
@@ -189,6 +192,7 @@ const DetailPayslip = () => {
 
 	return (
 		<div>
+		{/* {console.log("InvoiceData: ", invoiceData)} */}
 			<UserPrivateComponent permission={"readSingle-payroll"}>
 				<div className=''>
 					<div className='flex justify-end mr-10'>
